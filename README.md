@@ -1,2 +1,2 @@
 # Projects
-Projects to share the solution for common programming problems
+Projects to share the solutions for common programming problems
