@@ -10,11 +10,47 @@ using System.Windows.Forms;
 
 namespace PassiveView
 {
-    public partial class Form1 : Form
+    public partial class PersonView : Form, IPersonView
     {
-        public Form1()
+        PersonPresenter perseter = new PersonPresenter();
+
+        public PersonView()
         {
             InitializeComponent();
+        }
+
+        public string FirstName
+        {
+            get
+            {
+                return txtFirstName.Text;
+            }
+
+            set
+            {
+                txtFirstName.Text = value;
+            }
+        }
+
+        public string LastName
+        {
+            get
+            {
+                return txtLastName.Text;
+            }
+
+            set
+            {
+                txtLastName.Text = value;
+            }
+        }
+
+        private void BtnLoadPersonInfoClick(object sender, EventArgs e)
+        {
+            Person myPerson = perseter.GetPerson();
+            this.FirstName = myPerson.FirstName;
+            this.LastName = myPerson.LastName;
+            MessageBox.Show("Data Loaded is : " + FirstName + " " + LastName);
         }
     }
 }
