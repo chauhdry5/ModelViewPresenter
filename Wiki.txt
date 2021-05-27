@@ -1,0 +1,4 @@
+MVP -> Model View Presenter
+Baisc Information:
+1- Every View have a presenter (take as a highly specialized controller)
+2
