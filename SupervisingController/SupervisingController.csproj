@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IPersonView.cs" />
+    <Compile Include="Model\Person.cs" />
     <Compile Include="PersonView.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -8,13 +8,17 @@ namespace PassiveView
 {
     public class PersonPresenter
     {
-        public Person GetPerson()
+        private readonly IPersonView myPersonView;
+
+        public PersonPresenter(IPersonView personView)
         {
-            return new Person()
-            {
-                FirstName = "Mudasser",
-                LastName = "Hameed"
-            };
+            myPersonView = personView;
+        }
+
+        public void LoadPersonData()
+        {
+            myPersonView.FirstName = "Mudasser";
+            myPersonView.LastName = "Hameed";
 
         }
 

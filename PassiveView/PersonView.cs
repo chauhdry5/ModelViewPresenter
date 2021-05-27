@@ -12,7 +12,7 @@ namespace PassiveView
 {
     public partial class PersonView : Form, IPersonView
     {
-        PersonPresenter perseter = new PersonPresenter();
+        PersonPresenter perseter;
 
         public PersonView()
         {
@@ -47,10 +47,12 @@ namespace PassiveView
 
         private void BtnLoadPersonInfoClick(object sender, EventArgs e)
         {
-            Person myPerson = perseter.GetPerson();
-            this.FirstName = myPerson.FirstName;
-            this.LastName = myPerson.LastName;
-            MessageBox.Show("Data Loaded is : " + FirstName + " " + LastName);
+            perseter.LoadPersonData();
+        }
+
+        private void PersonView_Load(object sender, EventArgs e)
+        {
+            perseter = new PersonPresenter(this);
         }
     }
 }

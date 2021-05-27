@@ -109,6 +109,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PersonView";
             this.Text = "Person - Passive View";
+            this.Load += new System.EventHandler(this.PersonView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
