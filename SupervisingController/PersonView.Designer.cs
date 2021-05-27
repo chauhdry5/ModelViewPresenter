@@ -45,6 +45,7 @@
             this.btnLoadPersonInfo.TabIndex = 8;
             this.btnLoadPersonInfo.Text = "Load Person Info";
             this.btnLoadPersonInfo.UseVisualStyleBackColor = true;
+            this.btnLoadPersonInfo.Click += new System.EventHandler(this.BtnLoadPersonInfoClick);
             // 
             // label2
             // 
@@ -98,6 +99,7 @@
             this.Controls.Add(this.txtFirstName);
             this.Name = "PersonView";
             this.Text = "Person - Supervising Controller";
+            this.Load += new System.EventHandler(this.PersonView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

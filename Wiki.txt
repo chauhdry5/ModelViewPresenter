@@ -16,4 +16,4 @@ Baisc Information:
 	- Views are smarter in Supervising Controller Pattern
 	- They know what to do with the information provided by the Presenter
 	- Interface implements the Model object as property, rather view items as properties (as in Passive View)
-	- 
+	- In view, interface implementation required bit more work, however it seems more neet code in the end

@@ -54,6 +54,7 @@
     <Compile Include="PersonView.Designer.cs">
       <DependentUpon>PersonView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presenter\PersonPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PersonView.resx">

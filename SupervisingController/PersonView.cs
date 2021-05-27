@@ -12,7 +12,8 @@ namespace SupervisingController
 {
     public partial class PersonView : Form, IPersonView
     {
-        private Person _person;
+        private Person person;
+        private PersonPresenter presenter;
 
         public PersonView()
         {
@@ -23,17 +24,27 @@ namespace SupervisingController
         {
             get
             {
-                _person.FirstName = txtFirstName.Text;
-                _person.LastName = txtLastName.Text;
-                return _person; 
+                person.FirstName = txtFirstName.Text;
+                person.LastName = txtLastName.Text;
+                return person; 
             }
 
             set
             {
-                _person = value;
-                txtFirstName.Text = _person.FirstName;
-                txtLastName.Text = _person.LastName;
+                person = value;
+                txtFirstName.Text = person.FirstName;
+                txtLastName.Text = person.LastName;
             }
+        }
+
+        private void BtnLoadPersonInfoClick(object sender, EventArgs e)
+        {
+            presenter.LoadPersonData();
+        }
+
+        private void PersonView_Load(object sender, EventArgs e)
+        {
+            presenter = new PersonPresenter(this);
         }
     }
 }
